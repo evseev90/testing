@@ -5,6 +5,7 @@ const CurrenciesContext = createContext({currencies: [], current: 0});
 async function getСurrenciesData(setCurrencies) {
 
     let host = document.location.host.includes('localhost') ? 'http://abistep_test.local' : '';
+    console.log(host);
     await fetch(host + '/api/currencies')
         .then((response) => {
             return response.json();

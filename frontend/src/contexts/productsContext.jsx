@@ -4,6 +4,7 @@ const ProductsContext = createContext({products: []});
 
 async function getProductsData(setData) {
     let host = document.location.host.includes('localhost') ? 'http://abistep_test.local' : '';
+    console.log(host);
     await fetch(host + '/api/products')
         .then((response) => {
             return response.json();
