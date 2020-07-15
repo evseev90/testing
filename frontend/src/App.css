@@ -1,0 +1,36 @@
+body {
+    background-color: #eaeaea;
+}
+ul {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+ul li {
+    list-style: none;
+    border: 1px dashed gray;
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.wrap  {
+    display: flex;
+    flex: 1;
+}
+.img {
+    width: 180px;
+    height: 110px;
+}
+
+.img img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.price {
+    padding: 20px;
+}
