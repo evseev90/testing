@@ -3,7 +3,9 @@ import React, {useContext, useState, createContext, useEffect} from 'react';
 const CurrenciesContext = createContext({currencies: [], current: 0});
 
 async function getСurrenciesData(setCurrencies) {
-    await fetch('http://abistep_test.local/api/currencies')
+
+    let host = document.location.host.includes('localhost') ? 'http://abistep_test.local' : '';
+    await fetch(host + '/api/currencies')
         .then((response) => {
             return response.json();
         })

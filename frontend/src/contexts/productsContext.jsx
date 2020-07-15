@@ -3,7 +3,8 @@ import React, {useContext, useState, createContext, useEffect} from 'react';
 const ProductsContext = createContext({products: []});
 
 async function getProductsData(setData) {
-    await fetch('http://abistep_test.local/api/products')
+    let host = document.location.host.includes('localhost') ? 'http://abistep_test.local' : '';
+    await fetch(host + '/api/products')
         .then((response) => {
             return response.json();
         })
